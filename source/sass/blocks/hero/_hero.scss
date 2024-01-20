@@ -2,6 +2,14 @@
   width: 100vw;
   min-height: $hero-height-desktop;
   position: relative;
+
+  @include break($vp-desk-interim) {
+    min-height: $hero-height-tablet;
+  }
+
+  @include break($vp-mobile-interim) {
+    min-height: $hero-height-mobile;
+  }
 }
 
 .hero__img-wrapper {
@@ -19,10 +27,20 @@
 
 .hero__slide-wrapper {
   min-height: $hero-height-desktop;
+  height: 100%;
   padding-top: 114px;
   padding-bottom: 50px;
   display: flex;
   align-items: flex-end;
+
+  @include tablet {
+    min-height: $hero-height-tablet;
+  }
+
+  @include break($vp-mobile-interim) {
+    min-height: $hero-height-mobile;
+    padding-bottom: 20px;
+  }
 }
 
 .hero__overlay {
@@ -40,15 +58,48 @@
     padding: 40px 50px 30px;
     margin: 0;
     transform: translateY(7px);
+
+    @include break($vp-desk-interim) {
+      font-size: 36px;
+      line-height: 44px;
+      margin-right: 20px;
+      padding: 31px 40px 23px;
+      transform: translateY(3px);
+    }
+
+    @include break($vp-mobile-interim) {
+      font-size: 22px;
+      line-height: 26px;
+      padding: 19px 14px 17px;
+      margin-right: 0;
+      border-radius: 0px 0px 14px 0px;
+      transform: translateY(5px);
+      border-radius: 0px 16px 16px 0px;
+
+      span {
+        display: none;
+      }
+    }
   }
 }
 
 .hero__content {
-  width: 772px;
   padding: 0 50px 28px;
   background-color: $bg-overlay;
   border-radius: 0px 0px 30px 30px;
   position: relative;
+  margin-right: 196px;
+
+  @include break($vp-desk-interim) {
+    margin-right: 88px;
+    padding: 0 38px 11px 40px;
+  }
+
+  @include break($vp-mobile-interim) {
+    margin-right: 0;
+    padding: 0;
+    background-color: transparent;
+  }
 
   &::after {
     content: "";
@@ -59,6 +110,20 @@
     background-size: cover;
     width: 26px;
     height: 26px;
+
+    @include break($vp-desk-interim) {
+      top: 3px;
+    }
+
+    @include break($vp-mobile-interim) {
+      display: none;
+    }
+  }
+
+  a {
+    @include break($vp-desk-interim) {
+      transform: translateY(2px);
+    }
   }
 }
 
@@ -67,12 +132,32 @@
   align-items: center;
   gap: 20px;
 
+  @include tablet {
+    align-items: flex-start;
+    gap: 35px;
+  }
+
+  @include break($vp-mobile-interim) {
+    flex-direction: column;
+    gap: 0;
+  }
+
   p {
     margin: 0;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
     line-height: 26px;
+
+    @include break($vp-desk-interim) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @include break($vp-mobile-interim) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
@@ -87,6 +172,16 @@
   position: relative;
   transform: translateY(8px);
 
+  @include break($vp-desk-interim) {
+    transform: translateY(3px);
+  }
+
+  @include break($vp-mobile-interim) {
+    transform: translateY(5px);
+    border-radius: 12px 12px 0px 0px;
+    padding: 10px 16px;
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -96,6 +191,13 @@
     right: -25px;
     bottom: -1px;
     transform: rotate(270deg);
+
+    @include break($vp-mobile-interim) {
+      width: 10px;
+      height: 10px;
+      background-size: cover;
+      right: -9px;
+    }
   }
 }
 
@@ -108,6 +210,11 @@
   border: 1px solid $color-primary;
   cursor: pointer;
 
+  @include break($vp-mobile-interim) {
+    width: 8px;
+    height: 8px;
+  }
+
   &--active {
     background-color: $color-primary;
   }
@@ -116,4 +223,45 @@
 .hero_container {
   position: relative;
   top: 0;
+}
+
+.hero__text-wrapper {
+  @include break($vp-mobile-interim) {
+    padding: 0 14px 10px;
+    margin-right: 23px;
+    background-color: $bg-overlay;
+    position: relative;
+    border-radius: 0px 0px 14px 0px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url("../img/svg/angel.svg") no-repeat center;
+      background-size: cover;
+      top: 5px;
+      right: -9px;
+    }
+  }
+}
+
+.hero__btn-wrapper {
+  @include break($vp-mobile-interim) {
+    background-color: $bg-overlay;
+    padding: 9px 15px 12px;
+    border-radius: 0px 0px 14px 14px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: url("../img/svg/angel.svg") no-repeat center;
+      background-size: cover;
+      top: 0;
+      right: -9px;
+    }
+  }
 }

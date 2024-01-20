@@ -2,4 +2,13 @@
   max-width: $desktop-width;
   margin: 0 auto;
   padding: 0 $desktop-padding;
+
+  @include break($vp-desk-interim) {
+    padding: 0 45px;
+    margin: 0;
+  }
+
+  @include break($vp-mobile-interim) {
+    padding: 0 15px;
+  }
 }

@@ -18,6 +18,13 @@
   text-transform: uppercase;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
+  @include break($vp-mobile-interim) {
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+    padding: 2px 20px;
+  }
+
   &:hover {
     color: $btn-color-hover;
     background-color: $color-primary;
@@ -30,6 +37,11 @@
   &--icon {
     gap: 30px;
     padding-right: 4px;
+
+    @include break($vp-mobile-interim) {
+      gap: 19px;
+      padding-right: 3px;
+    }
   }
 }
 
@@ -43,6 +55,11 @@
   border-radius: 50%;
   color: $icon-color-stroke;
   transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, transform 0.3s ease-in-out;
+
+  @include break($vp-mobile-interim) {
+    width: 35px;
+    height: 35px;
+  }
 
   .btn:hover & {
     color: $color-primary;
