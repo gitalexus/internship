@@ -1,0 +1,56 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 30px;
+  border-radius: 30px;
+  border: 1px solid $color-primary;
+  background-color: $btn-bg-color;
+  cursor: pointer;
+
+  color: $color-primary;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  /* 100% */
+  letter-spacing: 0.28px;
+  text-transform: uppercase;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+
+  &:hover {
+    color: $btn-color-hover;
+    background-color: $color-primary;
+  }
+
+  &:active {
+    color: $btn-color-active;
+  }
+
+  &--icon {
+    gap: 30px;
+    padding-right: 4px;
+  }
+}
+
+.btn__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  height: 46px;
+  background-color: $color-primary;
+  border-radius: 50%;
+  color: $icon-color-stroke;
+  transition: background-color 0.1s ease-in-out, color 0.1s ease-in-out, transform 0.3s ease-in-out;
+
+  .btn:hover & {
+    color: $color-primary;
+    background-color: $color-inverse;
+    transform: rotate(45deg);
+  }
+
+  .btn:active & {
+    color: $btn-icon-color-active;
+  }
+}

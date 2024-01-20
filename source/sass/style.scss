@@ -2,3 +2,11 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "swiper/css";
+// @import "swiper/pagination";
+@import "global";
+@import "mixins/base-mixins";
+@import "utils/container";
+@import "blocks/common";
+
+@import "blocks/hero/hero";

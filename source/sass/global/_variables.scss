@@ -1,0 +1,49 @@
+// Viewports
+// ---------------------------------
+$vp-mobile: 320px;
+$vp-tablet: 768px;
+$vp-desktop: 1440px;
+
+// Retina
+// ---------------------------------
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+// Geometry
+// ---------------------------------
+$desktop-width: $vp-desktop;
+$tablet-width: $vp-tablet;
+$mobile-width: $vp-mobile;
+
+$hero-height-desktop: 800px;
+$hero-height-tablet: 1024px;
+$hero-height-mobile: 568px;
+
+$desktop-padding: 100px;
+$tablet-padding: 45px;
+$mobile-padding: 15px;
+
+// Typography
+// ---------------------------------
+$ff-primary: 'Manrope', 'Arial', sans-serif;
+$font-size-base: 16px;
+
+// Colors
+// ---------------------------------
+$color-primary: #316DC2;
+$color-inverse: #ffffff;
+$text-color-base: #484848;
+$text-color-primary: $color-primary;
+
+$icon-color-stroke: #ffffff;
+
+$btn-color: $color-primary;
+$btn-bg-color: $color-inverse;
+$btn-icon-bg-color: $color-primary;
+$btn-color-hover: $color-inverse;
+$btn-color-active: rgba(255, 255, 255, 0.7);
+$btn-icon-color-active: rgba(49, 110, 196, 0.7);
+
+$bg-base: #F0EFE9;
+$bg-overlay: #ffffff;
