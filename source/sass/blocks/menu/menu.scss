@@ -134,12 +134,13 @@
   top: 0;
   left: 0;
   z-index: 99;
-  width: 100%;
-  height: 100vh;
+  width: 300%;
+  height: 300vh;
   background-color: $bg-modal-overlay;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  transform: translate(-50%, -50%);
 
   .menu.is-active & {
     opacity: 1;

@@ -24,10 +24,12 @@ function changeMenuState() {
   menu.classList.toggle('is-active');
   if (menu.classList.contains('is-active')) {
     window.focusLock.lock('.menu__container');
+    // window.scrollLock.disableScrolling();
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', onEscPress);
   } else {
     window.focusLock.unlock('.menu__container');
+    // window.scrollLock.enableScrolling();
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onEscPress);
   }
