@@ -10,17 +10,54 @@
 </head>
 
 <body>
-  <header class="header">
-    <!-- TODO: logo & menu -->
+  <header class="header container">
+    <div class="header__logo" data-header="logo">
+      <img src="img/logo.svg" alt="Логотип проекта 'Стажировка' синяя конфедератка" width="30" height="30">
+    </div>
+    <!-- menu -->
+    <div class="header__menu menu" data-menu="true">
+      <div class="menu__modal-overlay"></div>
+      <div class="menu__container">
+        <button class="header__menu menu__btn" type="button" data-menu-button="true">
+          <span class="menu__caption">меню</span>
+          <span class="menu__burger">
+            <span class="menu__burger-bar"></span>
+          </span>
+        </button>
+        <ul class="menu__list visually-hidden" data-menu-list="true">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О проекте</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Программы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">как поехать</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">отзывы</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">контакты</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </header>
   <main class="main">
+    <h1 class="visually-hidden">Проект "Стажировка"</h1>
     <section class="hero swiper swiper-wrapper" data-test="slider" data-swiper="hero">
       <div class="swiper-wrapper">
         <div class="hero__slide swiper-slide">
           <div class="hero__img-wrapper">
             <picture>
-              <source media="(max-width: 720px)" srcset="img/hero/hero-m-1.jpg" width="305" height="309">
-              <source media="(max-width: 768px)" srcset="img/hero/hero-t-1.jpg" width="768" height="1024">
+              <source media="(max-width: 720px)" type="image/jpeg" srcset="img/hero/hero-m-1.jpg" width="305"
+                height="309">
+              <source media="(max-width: 768px)" type="image/jpeg" srcset="img/hero/hero-t-1.jpg" width="768"
+                height="1024">
               <img src="img/hero/hero-d-1.jpg" alt="" width="1440" height="800">
             </picture>
           </div>
@@ -39,7 +76,7 @@
                       </p>
                     </div>
                     <div class="hero__btn-wrapper">
-                      <a class="btn btn--icon" hre="#">
+                      <a class="btn btn--icon" href="#">
                         подробнее
                         <span class="btn__icon">
                           <svg width="8" height="8" aria-hidden="true" focusable="false">

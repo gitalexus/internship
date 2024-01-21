@@ -51,7 +51,7 @@
   h2 {
     color: $text-color-primary;
     background-color: $bg-overlay;
-    border-radius: 0px 30px 30px 0px;
+    border-radius: 0 30px 30px 0;
     font-size: 54px;
     font-weight: 400;
     line-height: 62px;
@@ -72,9 +72,8 @@
       line-height: 26px;
       padding: 19px 14px 17px;
       margin-right: 0;
-      border-radius: 0px 0px 14px 0px;
       transform: translateY(5px);
-      border-radius: 0px 16px 16px 0px;
+      border-radius: 0 16px 16px 0;
 
       span {
         display: none;
@@ -86,7 +85,7 @@
 .hero__content {
   padding: 0 50px 28px;
   background-color: $bg-overlay;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0 0 30px 30px;
   position: relative;
   margin-right: 196px;
 
@@ -165,9 +164,8 @@
   display: flex;
   padding: 14px 20px;
   gap: 12px;
-  background-color: $bg-overlay;
   width: fit-content;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
   background-color: $bg-overlay;
   position: relative;
   transform: translateY(8px);
@@ -178,7 +176,7 @@
 
   @include break($vp-mobile-interim) {
     transform: translateY(5px);
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     padding: 10px 16px;
   }
 
@@ -220,10 +218,10 @@
   }
 }
 
-.hero_container {
-  position: relative;
-  top: 0;
-}
+// .hero__container {
+//   position: relative;
+//   top: 0;
+// }
 
 .hero__text-wrapper {
   @include break($vp-mobile-interim) {
@@ -231,7 +229,7 @@
     margin-right: 23px;
     background-color: $bg-overlay;
     position: relative;
-    border-radius: 0px 0px 14px 0px;
+    border-radius: 0 0 14px;
 
     &::after {
       content: "";
@@ -250,7 +248,7 @@
   @include break($vp-mobile-interim) {
     background-color: $bg-overlay;
     padding: 9px 15px 12px;
-    border-radius: 0px 0px 14px 14px;
+    border-radius: 0 0 14px 14px;
     position: relative;
 
     &::after {
