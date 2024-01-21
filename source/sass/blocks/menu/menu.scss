@@ -1,3 +1,14 @@
+/*
+  - анимация для плавного проявления и исчезновения меню реализована в виде menuFadeIn и menuFadeOut
+  - анимация работаете только с фиксированными значениями width
+  - сам список меню вынесен в отдельный блок с position absolute, чтобы в состоянии hidden не было контейнера который сохраняет свои габариты
+  и закрывает слайды не давая их перетаскивать (можно было бы скрыть display: none, но тогда не будет работать анимация)
+  - чтобы анимация не появлялась при первом рендере страницы на элемент изначально повешен visually-hidden класс,
+  который удаляется через 500мс после загрузки страницы.
+  - для отсутвия фокусов в закрытом состоянии на элемент дополнительно устанавливается hidden="true"
+
+*/
+
 @keyframes menuFadeIn {
   0% {
     opacity: 0;
@@ -21,7 +32,6 @@
     transform: scaleX(0);
   }
 }
-
 
 .menu__container {
   display: flex;
@@ -156,6 +166,8 @@
   min-width: 286px;
   opacity: 0;
   transform: scaleX(0);
+  transition: visibility 0.4s ease;
+  visibility: hidden;
 
   @include break($vp-desk-interim) {
     right: $tablet-padding;
@@ -168,6 +180,7 @@
   .menu.is-active & {
     opacity: 1;
     transform: scaleX(1);
+    visibility: visible;
 
     min-width: 286px;
     opacity: 1;
