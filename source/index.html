@@ -30,12 +30,26 @@
             <span class="menu__burger-bar"></span>
           </span>
         </button>
-        <ul class="menu__list visually-hidden" data-menu-list="true">
+        <ul class="menu__list" data-menu-list="true" data-accordion="parent">
           <li class="menu__item">
             <a class="menu__link" href="#">О проекте</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">Программы</a>
+          <li class="menu__item" data-accordion="element">
+            <a class="menu__link has-sublist" data-accordion="button" href="#">Программы</a>
+            <ul class="menu__sublist" class="accordion__content1" data-accordion="content">
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Стажировки</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Волонтёрство</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Учёба</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Религия</a>
+              </li>
+            </ul>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">как поехать</a>
@@ -43,14 +57,31 @@
           <li class="menu__item">
             <a class="menu__link" href="#">отзывы</a>
           </li>
-          <li class="menu__item">
-            <a class="menu__link" href="#">новости</a>
+          <li class="menu__item" data-accordion="element">
+            <a class="menu__link has-sublist" data-accordion="button" href="#">новости</a>
+            <ul class="menu__sublist" class="accordion__content1" data-accordion="content">
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Общее</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Волонтёрство</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Стажировки</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Карьера</a>
+              </li>
+              <li class="menu__subitem">
+                <a class="menu__sublink" href="#">Путешествия</a>
+              </li>
+            </ul>
           </li>
           <li class="menu__item">
             <a class="menu__link" href="#">контакты</a>
           </li>
-        </ul>
       </div>
+    </div>
     </div>
   </header>
   <main class="main">

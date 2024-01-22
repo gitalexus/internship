@@ -1,15 +1,19 @@
+import { accordions, initAccordions } from "../vendor/liga/accordion/init-accordion";
+
 function initMenu() {
   const menuBtn = document.querySelector('[data-menu-button]');
-  const menuList = document.querySelector('[data-menu-list]');
+  // const menuList = document.querySelector('[data-menu-list]');
   const menuOverlay = document.querySelector('[data-menu="overlay"]');
 
-  setTimeout(() => {
-    menuList.classList.remove('visually-hidden');
-  }, 500);
+  // setTimeout(() => {
+  //   menuList.classList.remove('visually-hidden');
+  // }, 500);
 
   menuBtn.addEventListener('click', changeMenuState);
   menuOverlay.addEventListener('click', changeMenuState);
   document.addEventListener('scroll', onScrollMenuActions);
+
+  initAccordionButtons();
 }
 
 function onEscPress(evt) {
@@ -18,18 +22,42 @@ function onEscPress(evt) {
   }
 }
 
+/* управление возможностью фокусировки на элементах аккордиона (чтобы tab не вызвал проваливание фокуса в закрытый аккордеон) */
+function initAccordionButtons() {
+  const accordionButtons = document.querySelectorAll('[data-accordion="button"]');
+
+  accordionButtons.forEach((button) => {
+    changeTabIndexes(button);
+    button.addEventListener('click', onClickAccordionButton);
+    const links = button.parentNode.querySelectorAll('.menu__sublink');
+    links.forEach((link) => {
+      link.tabIndex = -1;
+    });
+  });
+}
+
+function changeTabIndexes(button) {
+  const isActive = !button.parentNode.classList.contains('is-active');
+  const links = button.parentNode.querySelectorAll('.menu__sublink');
+  links.forEach((link) => {
+    link.tabIndex = isActive ? 0 : -1;
+  });
+}
+
+function onClickAccordionButton(event) {
+  changeTabIndexes(event.currentTarget);
+}
+
 function changeMenuState() {
   const menu = document.querySelector('[data-menu]');
 
   menu.classList.toggle('is-active');
   if (menu.classList.contains('is-active')) {
     window.focusLock.lock('.menu__container');
-    // window.scrollLock.disableScrolling();
     document.body.style.overflow = 'hidden';
     document.addEventListener('keydown', onEscPress);
   } else {
     window.focusLock.unlock('.menu__container');
-    // window.scrollLock.enableScrolling();
     document.body.style.overflow = '';
     document.removeEventListener('keydown', onEscPress);
   }

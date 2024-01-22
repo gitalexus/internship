@@ -3,10 +3,9 @@
   - анимация работаете только с фиксированными значениями width
   - сам список меню вынесен в отдельный блок с position absolute, чтобы в состоянии hidden не было контейнера который сохраняет свои габариты
   и закрывает слайды не давая их перетаскивать (можно было бы скрыть display: none, но тогда не будет работать анимация)
-  - чтобы анимация не появлялась при первом рендере страницы на элемент изначально повешен visually-hidden класс,
-  который удаляется через 500мс после загрузки страницы.
+  - (! данный пункт отключен, с текущими настройками [transition: visibility 0.3s ease;] все работает без костыля) чтобы анимация
+  не появлялась при первом рендере страницы на элемент изначально повешен visually-hidden класс, который удаляется через 500мс после загрузки страницы.
   - для отсутвия фокусов в закрытом состоянии на элемент дополнительно устанавливается hidden="true"
-
 */
 
 @keyframes menuFadeIn {
@@ -53,17 +52,21 @@
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  width: 139px;
-  transition: width 0.3s ease-out;
+  width: 135px;
+  transition: width 0.3s ease-out, background-color 0.3s ease, color 0.3s ease;
+  ;
   align-self: flex-end;
   user-select: none;
 
-  .menu.is-active & {
-    width: 286px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
 
-    @include break($vp-mobile-interim) {
-      width: 290px;
-    }
+  .menu.is-active & {
+    width: 290px;
+    background-color: $color-primary;
+    color: $color-inverse;
   }
 }
 
@@ -80,6 +83,11 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+  transition: background-color 0.3s ease;
+
+  .menu.is-active & {
+    background-color: $color-inverse;
+  }
 }
 
 .menu__burger-bar {
@@ -121,10 +129,12 @@
   background-color: transparent;
 
   &::before {
+    background-color: $color-primary;
     transform: translate(3px, -2.5px) rotate(45deg);
   }
 
   &::after {
+    background-color: $color-primary;
     transform: translate(3px, 2.5px) rotate(-45deg);
   }
 }
@@ -152,19 +162,18 @@
   display: flex;
   flex-direction: column;
   background-color: $color-primary;
-  padding: 35px 25px;
+  padding: 31px 25px;
   margin: 0;
-  margin-top: 4px;
   list-style: none;
   border-radius: 16px;
-  gap: 28px;
+  gap: 20px;
   z-index: 100;
   position: absolute;
   top: 58px;
   right: $desktop-padding;
   transform-origin: right;
   animation: menuFadeOut 0.4s;
-  min-width: 286px;
+  min-width: 290px;
   opacity: 0;
   transform: scaleX(0);
   transition: visibility 0.4s ease;
@@ -183,13 +192,9 @@
     transform: scaleX(1);
     visibility: visible;
 
-    min-width: 286px;
+    min-width: 290px;
     opacity: 1;
     animation: menuFadeIn 0.4s;
-
-    @include mobile {
-      width: 290px;
-    }
   }
 }
 
@@ -200,4 +205,60 @@
   line-height: 16px;
   letter-spacing: 0.32px;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.9;
+    outline: none;
+  }
+
+  .menu__item.is-active & {
+    opacity: 1;
+  }
+}
+
+.menu__sublist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 0;
+  padding-left: 16px;
+}
+
+.menu__sublink {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 16px;
+  transition: color 0.25s ease;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 0.9);
+    outline: none;
+  }
+}
+
+.menu__subitem:first-child {
+  margin-top: 12px;
+}
+
+.has-sublist {
+
+  &::after {
+    content: "";
+    position: relative;
+    display: inline-block;
+    background: url("../img/svg/menu-arrow.svg") no-repeat center center;
+    width: 12px;
+    height: 12px;
+    left: 10px;
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+  }
+
+  .menu__item.is-active &::after {
+    transform: none;
+  }
 }
