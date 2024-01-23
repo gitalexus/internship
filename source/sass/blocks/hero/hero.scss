@@ -4,6 +4,10 @@
   @include break($vp-desk-interim) {
     margin-bottom: 100px;
   }
+
+  @include mobile {
+    margin-bottom: 60px;
+  }
 }
 
 
