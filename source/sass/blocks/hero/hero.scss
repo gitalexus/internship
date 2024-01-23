@@ -1,3 +1,8 @@
+.hero {
+  margin-bottom: 123px;
+}
+
+
 .hero__slide {
   width: 100vw;
   min-height: $hero-height-desktop;
@@ -221,11 +226,6 @@
     background-color: $color-primary;
   }
 }
-
-// .hero__container {
-//   position: relative;
-//   top: 0;
-// }
 
 .hero__text-wrapper {
   @include break($vp-mobile-interim) {

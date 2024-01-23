@@ -33,15 +33,18 @@ $font-size-base: 16px;
 // ---------------------------------
 $color-primary: #316dc2;
 $color-inverse: #ffffff;
+$color-beige: #f0efe9;
 $text-color-base: #484848;
 $text-color-primary: $color-primary;
 $icon-color-stroke: #ffffff;
+
+$bg-base: #f0efe9;
+$bg-overlay: #ffffff;
+$bg-modal-overlay: rgba(13, 29, 51, 0.4);
+
 $btn-color: $color-primary;
 $btn-bg-color: $color-inverse;
 $btn-icon-bg-color: $color-primary;
 $btn-color-hover: $color-inverse;
 $btn-color-active: rgba(255, 255, 255, 0.7);
 $btn-icon-color-active: rgba(49, 110, 196, 0.7);
-$bg-base: #f0efe9;
-$bg-overlay: #ffffff;
-$bg-modal-overlay: rgba(13, 29, 51, 0.4);
