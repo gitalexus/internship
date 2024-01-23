@@ -1,5 +1,9 @@
 .hero {
-  margin-bottom: 123px;
+  margin-bottom: 120px;
+
+  @include break($vp-desk-interim) {
+    margin-bottom: 100px;
+  }
 }
 
 
