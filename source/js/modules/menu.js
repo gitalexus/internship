@@ -1,13 +1,14 @@
-import { accordions, initAccordions } from "../vendor/liga/accordion/init-accordion";
+const isMobile = window.matchMedia('(max-width: 720px)');
+const menuBlock = document.querySelector('[data-header="sticky-menu"]');
+const MENU_TOP_OFFSET = 31;
+const MENU_TOP_OFFSET_MOBILE = 21;
+const MENU_HIDDEN_OFFSET = -55;
+let menuPos = MENU_TOP_OFFSET;
+let scrollY = 0;
 
 function initMenu() {
   const menuBtn = document.querySelector('[data-menu-button]');
-  // const menuList = document.querySelector('[data-menu-list]');
   const menuOverlay = document.querySelector('[data-menu="overlay"]');
-
-  // setTimeout(() => {
-  //   menuList.classList.remove('visually-hidden');
-  // }, 500);
 
   menuBtn.addEventListener('click', changeMenuState);
   menuOverlay.addEventListener('click', changeMenuState);
@@ -22,7 +23,7 @@ function onEscPress(evt) {
   }
 }
 
-/* управление возможностью фокусировки на элементах аккордиона (чтобы tab не вызвал проваливание фокуса в закрытый аккордеон) */
+/* управление возможностью фокусировки на элементах аккордеона (чтобы tab не вызвал проваливание фокуса в закрытый аккордеон) */
 function initAccordionButtons() {
   const accordionButtons = document.querySelectorAll('[data-accordion="button"]');
 
@@ -63,21 +64,28 @@ function changeMenuState() {
   }
 }
 
-const menuBlock = document.querySelector('[data-header="sticky-menu"]');
-const MENU_TOP_OFFSET = 31;
-const MENU_HIDDEN_OFFSET = -55; //+ 31;
-let menuPos = MENU_TOP_OFFSET;
-let scrollY = 0;
-
 function onScrollMenuActions() {
   const newScrollY = window.scrollY;
   const delta = newScrollY - scrollY;
   scrollY = newScrollY;
+  const topOffset = isMobile.matches ? MENU_TOP_OFFSET_MOBILE : MENU_TOP_OFFSET;
   menuPos = (delta > 0)
     ? MENU_HIDDEN_OFFSET
-    : MENU_TOP_OFFSET;
+    : topOffset;
 
   menuBlock.style.top = `${menuPos}px`;
 }
+
+window.addEventListener('resize', () => {
+
+  if (scrollY !== window.scrollY) {
+    scrollY = window.scrollY;
+  }
+
+  if (parseInt(menuBlock.style.top, 10) > 0) {
+    menuPos = isMobile.matches ? MENU_TOP_OFFSET_MOBILE : MENU_TOP_OFFSET;
+    menuBlock.style.top = `${menuPos}px`;
+  }
+});
 
 export { initMenu };

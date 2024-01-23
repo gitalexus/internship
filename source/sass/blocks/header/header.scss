@@ -8,6 +8,10 @@
   transition: top 0.7s ease;
   left: 50%;
   transform: translateX(-50%);
+
+  @include break($vp-mobile-interim) {
+    top: 21px;
+  }
 }
 
 .header__logo {

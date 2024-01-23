@@ -33,6 +33,10 @@
   display: flex;
   align-items: flex-end;
 
+  @include break($vp-desk-interim) {
+    padding-bottom: 60px;
+  }
+
   @include tablet {
     min-height: $hero-height-tablet;
   }
@@ -70,7 +74,7 @@
     @include break($vp-mobile-interim) {
       font-size: 22px;
       line-height: 26px;
-      padding: 19px 14px 17px;
+      padding: 20px 14px 16px;
       margin-right: 0;
       transform: translateY(5px);
       border-radius: 0 16px 16px 0;
