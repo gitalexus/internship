@@ -2,16 +2,15 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+
 // @import "vendor/accordion/accordion";
 @import "vendor/accordion/data-accordion";
 @import "swiper/css";
 @import "global";
 @import "mixins/base-mixins";
-
 @import "utils/container";
 @import "utils/visually-hidden";
 @import "utils/is-hidden";
-
 @import "blocks/common";
 @import "blocks/header/header";
 @import "blocks/menu/menu";

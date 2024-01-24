@@ -8,6 +8,7 @@
 
   @include mobile {
     padding: 2px 15px 0;
+    padding-right: 13px;
   }
 }
 
@@ -55,6 +56,7 @@
       font-size: 20px;
       line-height: 20px;
       margin-bottom: 13px;
+      margin-left: 1px;
     }
   }
 
@@ -149,6 +151,7 @@
     display: flex;
     flex-direction: column;
     padding: 42px 20px 40px 30px;
+    margin-right: 2px;
     gap: 22px;
   }
 }
@@ -178,7 +181,7 @@
     width: 42px;
     height: 42px;
     top: -2px;
-    left: 0px;
+    left: 0;
     transform: translate(-50%, -50%);
     background: $color-primary url("../img/svg/david-star.svg") center no-repeat;
     background-size: 18px 18px;
@@ -186,7 +189,7 @@
 
 
   h3 {
-    color: var(--White, #FFF);
+    color: $color-inverse;
     font-size: 26px;
     line-height: 30px;
     font-weight: 400;
@@ -229,7 +232,6 @@
   gap: 36px;
 
   @include break($vp-1400) {
-    gap: 12px;
     padding-left: 29px;
     padding-right: 32px;
     gap: 7px;
@@ -238,7 +240,7 @@
   @include mobile {
     padding-left: 19px;
     padding-right: 19px;
-    gap: 4px
+    gap: 4px;
   }
 
   h3 {
@@ -255,7 +257,6 @@
   padding-right: 29px;
 
   @include break($vp-1400) {
-    gap: 12px;
     padding-left: 29px;
     padding-right: 16px;
     gap: 7px;
@@ -264,7 +265,7 @@
   @include mobile {
     padding-left: 19px;
     padding-right: 19px;
-    gap: 4px
+    gap: 4px;
   }
 
   h3 {
@@ -282,7 +283,6 @@
   padding-right: 53px;
 
   @include break($vp-1400) {
-    gap: 12px;
     padding-left: 29px;
     padding-right: 32px;
     gap: 7px;
@@ -291,11 +291,15 @@
   @include mobile {
     padding-left: 19px;
     padding-right: 19px;
-    gap: 4px
+    gap: 4px;
   }
 
   h3 {
     width: 134px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
 
@@ -303,7 +307,6 @@
   gap: 25px;
 
   @include break($vp-1400) {
-    gap: 12px;
     padding-left: 29px;
     padding-right: 16px;
     gap: 7px;
@@ -312,10 +315,14 @@
   @include mobile {
     padding-left: 19px;
     padding-right: 19px;
-    gap: 4px
+    gap: 4px;
   }
 
   h3 {
     width: 171px;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 }
