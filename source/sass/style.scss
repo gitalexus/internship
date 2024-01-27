@@ -2,6 +2,8 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/custom-select/custom-select";
+@import "vendor/modal/modal";
 
 // @import "vendor/accordion/accordion";
 @import "vendor/accordion/data-accordion";
@@ -11,8 +13,10 @@
 @import "utils/container";
 @import "utils/visually-hidden";
 @import "utils/is-hidden";
+@import "utils/scroll-lock";
 @import "blocks/common";
 @import "blocks/header/header";
 @import "blocks/menu/menu";
 @import "blocks/hero/hero";
 @import "blocks/about/about";
+@import "blocks/feedback/feedback";

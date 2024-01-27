@@ -251,7 +251,6 @@ export class Validator {
     if (!parent) {
       return;
     }
-
     if (!parent.hasAttribute('data-required')) {
       const removeElement = parent.querySelector('input') || parent.querySelector('select') || parent.querySelector('textarea');
 

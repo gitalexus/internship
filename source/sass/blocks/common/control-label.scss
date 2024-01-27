@@ -1,0 +1,16 @@
+.control-label {
+  font-size: 14px;
+  line-height: 18px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.control-label--checkbox {
+  font-size: 12px;
+  line-height: 12px;
+  cursor: pointer;
+
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  align-items: center;
+}

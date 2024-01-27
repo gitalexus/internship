@@ -25,9 +25,12 @@
     padding: 2px 20px;
   }
 
+
+  &:focus-visible,
   &:hover {
     color: $btn-color-hover;
     background-color: $color-primary;
+    outline: none;
   }
 
   &:active {
@@ -62,7 +65,8 @@
     height: 35px;
   }
 
-  .btn:hover & {
+  .btn:hover &,
+  .btn:focus-visible & {
     color: $color-primary;
     background-color: $color-inverse;
     transform: rotate(45deg);
@@ -71,4 +75,38 @@
   .btn:active & {
     color: $btn-icon-color-active;
   }
+}
+
+.btn-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: url("../img/svg/close-cross.svg") no-repeat center center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease-in-out;
+
+  @include mobile {
+    top: 17px;
+    right: 17px;
+    width: 22px;
+    height: 22px;
+    background-size: 12px 12px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 1px rgba($color-primary, 0.3);
+
+    @include mobile {
+      box-shadow: 0 0 5px 1px rgba($color-primary, 0.3);
+    }
+  }
+}
+
+.btn__caption {
+  flex-grow: 1;
 }

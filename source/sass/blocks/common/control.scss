@@ -1,0 +1,50 @@
+.control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 14px;
+  gap: 7px;
+
+  @include mobile {
+    gap: 6px;
+    margin-bottom: 14px;
+  }
+
+  .control-label {
+    order: 1;
+  }
+
+  .control-field {
+    order: 2;
+  }
+
+  .custom-select {
+    order: 2;
+  }
+}
+
+.control__check-mark {
+  display: inline-block;
+  width: 20px;
+  height: 21px;
+  border-radius: 2px;
+  border: 1px solid rgba($color-primary, 0.7);
+  background-color: $color-primary;
+  color: transparent;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  cursor: pointer;
+
+  .control-field--chekbox:checked~label & {
+    background-color: #316dc2;
+    color: white;
+  }
+
+}
+
+.control--checkbox.is-invalid .control__check-mark {
+  border-color: #FF5E66;
+  background: rgba(255, 94, 102, 0.20);
+}

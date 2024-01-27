@@ -1,0 +1,63 @@
+.control-field {
+  border-radius: 8px;
+  border: 1px solid rgba($text-color-base, 0.3);
+  padding: 16px 20px;
+  transition: opacity 0.3s ease-in-out;
+  font-size: 14px;
+  line-height: 14px;
+  color: #484848;
+
+  @include mobile {
+    padding: 11px 20px;
+  }
+
+  &--select {
+    padding-left: 20px;
+    padding-bottom: 17px;
+    appearance: none;
+    position: relative;
+    background: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='icon/arrow-down'%3E%3Cpath id='Vector 21' d='M15.273 5.09082L8.00027 11.6363L0.727539 5.09082' stroke='%23484848'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat right 20px center/16px 16px;
+    ;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &:hover:not(:disabled),
+  &:focus-visible {
+    outline: none;
+    border: 1px solid rgba($text-color-base, 1);
+  }
+
+  &:disabled {
+    border: 1px solid rgba(169, 175, 183, 0.50);
+    background: rgba(169, 175, 183, 0.20);
+  }
+
+  .control.is-invalid & {
+    border: 1px solid var(--State-Error, #FF5E66);
+    background: rgba(255, 94, 102, 0.20);
+  }
+}
+
+.control-field:hover+.control-label {
+  opacity: 1;
+}
+
+.control-field:disabled+.control-label {
+  opacity: 0.6;
+}
+
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+
+  &:checked {
+    background-color: blue;
+  }
+}

@@ -196,6 +196,8 @@
       </div>
     </section>
 
+
+
     <section class="about container" data-test="about">
       <div class="about__text-content">
         <div class="about__left-column">
@@ -210,14 +212,14 @@
             центра — наделить этих людей способностью инициировать значимые изменения.</p>
           <!-- <a class="btn" href="#">подробнее о проекте</a> -->
           <!-- <div class="hero__btn-wrapper"> -->
-          <a class="btn btn--icon" href="#">
+          <button class="btn btn--icon" href="#" type="button" data-open-modal="about">
             подробнее о проекте
             <span class="btn__icon">
               <svg width="8" height="8" aria-hidden="true" focusable="false">
                 <use href="/__spritemap#sprite-arrow"></use>
               </svg>
             </span>
-          </a>
+          </button>
           <!-- </div> -->
         </div>
       </div>
@@ -252,7 +254,84 @@
     <div data-test="footer">footer</div>
     -->
   </main>
-  <script type="module" src="js/main.js"></script>
+
+  <!-- компонент модального окна требует доработки компонентной версии лиги (выдате ошибки при подключении как в демо) -->
+  <div class="modal" data-modal="about">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal=""></div>
+      <div class="modal__content" data-form-validate>
+        <button class="btn-close" data-close-modal aria-label="Закрыть окно"></button>
+        <form class="feedback" action="https://echo.htmlacademy.ru/" method="post">
+          <h2 class="feedback__title">Напишите нам</h2>
+          <p class="feedback__desc">Оставьте ваши контакты, если у вас остались вопросы — мы на них ответим!</p>
+          <div class="control" data-validate-type="text" data-focus data-required="true" data-limitation="letters">
+            <input class="control-field" type="text" id="name" name="name" autocomplete="off">
+            <label class="control-label" for="name">Имя</label>
+          </div>
+          <div class="control" data-validate-type="phone" data-required="true">
+            <input class="control-field" type="text" id="phone" name="phone">
+            <label class="control-label" for="phone">Телефон</label>
+          </div>
+
+          <!-- современная экспериментальная нативная стилизация https://www.youtube.com/watch?v=4SEhtHEw2Ow -->
+          <!-- классическая стилизация селекта под все браузеры https://youtu.be/NBb2OV2iQCw?si=8ssOTIV4KhUBIz3c&t=961 -->
+          <!-- pointer-events: none; -->
+          <!-- в данном решении применен компонент лиги -->
+          <div class="control feedback__city">
+            <label class="control-label control-label--city" for="city">Выберите город</label>
+            <div class="custom-select custom-select--internship" data-select data-name="city"
+              data-validate-type="select" data-required="true">
+              <!-- <span class="custom-select__error">some-error</span> -->
+              <span class="custom-select__placeholder"></span>
+              <button class="custom-select__button custom-select__button--internship" type="button"
+                aria-label="Выберите одну из опций">
+                <span class="custom-select__text custom-select__text--internship"></span>
+                <span class="custom-select__icon custom-select__icon--internship"></span>
+              </button>
+              <ul class="custom-select__list custom-select__list--internship" role="listbox">
+                <li class="custom-select__item custom-select__item--internship" tabindex="0" data-select-value="Moscow"
+                  aria-selected="false">
+                  Москва</li>
+                <li class="custom-select__item custom-select__item--internship" tabindex="0"
+                  data-select-value="St-Petersburg" aria-selected="false">
+                  Санкт-Петербург</li>
+                <li class="custom-select__item custom-select__item--internship" tabindex="0"
+                  data-select-value="Novosibirsk" aria-selected="false">
+                  Новосибирск</li>
+                <li class="custom-select__item custom-select__item--internship" tabindex="0"
+                  data-select-value="Ekaterinburg" aria-selected="false">
+                  Екатеринбург</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="control--checkbox feedback__consent" data-validate-type="checkbox" data-required="true">
+            <input class="control-field--chekbox visually-hidden-focusable" type="checkbox" name="consent" id="consent"
+              type="text" checked>
+            <label class="control-label--checkbox" for="consent">
+              <span class="control__check-mark">
+                <svg width="10" height="8" aria-hidden="true" focusable="false">
+                  <use href="/__spritemap#sprite-check-box"></use>
+                </svg>
+              </span>
+              <span>Я согласен на обработку моих персональных данных</span>
+            </label>
+          </div>
+          <button class="btn btn--icon feedback__submit" type="submit">
+            <span class="btn__caption">отправить</span>
+            <span class="btn__icon">
+              <svg width="8" height="8" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-arrow"></use>
+              </svg>
+            </span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js">
+  </script>
 </body>
 
 </html>
