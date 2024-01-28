@@ -75,6 +75,11 @@
   .btn:active & {
     color: $btn-icon-color-active;
   }
+
+  &--slider {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .btn-close {
@@ -109,4 +114,54 @@
 
 .btn__caption {
   flex-grow: 1;
+}
+
+.btn-slider {
+  width: 22px;
+  height: 22px;
+  border: none;
+  border-radius: 50%;
+  color: $color-primary;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-inverse;
+  }
+
+  &:active:not(.swiper-button-disabled) {
+    svg {
+      opacity: 0.7;
+    }
+  }
+
+  &.swiper-button-disabled {
+    background-color: transparent;
+    color: #A9AFB7;
+    cursor: auto;
+  }
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.btn__icon--slider {
+
+  &:hover,
+  &:focus-visible {
+    transform: rotate(45deg);
+    background-color: $color-inverse;
+    color: $color-primary;
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
 }

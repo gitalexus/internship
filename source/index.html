@@ -86,13 +86,13 @@
   </header>
   <main class="main">
     <h1 class="visually-hidden">Проект "Стажировка"</h1>
-    <section class="hero swiper swiper-wrapper" data-test="slider" data-swiper="hero">
+    <section class="hero swiper" data-test="slider" data-swiper="hero">
       <div class="swiper-wrapper">
         <div class="hero__slide swiper-slide">
           <div class="hero__img-wrapper">
             <picture>
-              <source media="(max-width: 720px)" type="image/jpeg" srcset="img/hero/hero-m-1.jpg" width="305"
-                height="309">
+              <source media="(max-width: 720px)" type="image/jpeg" srcset="img/hero/hero-m-1.jpg" width="290"
+                height="400">
               <source media="(max-width: 768px)" type="image/jpeg" srcset="img/hero/hero-t-1.jpg" width="768"
                 height="1024">
               <img src="img/hero/hero-d-1.jpg" alt="" width="1440" height="800">
@@ -196,8 +196,6 @@
       </div>
     </section>
 
-
-
     <section class="about container" data-test="about">
       <div class="about__text-content">
         <div class="about__left-column">
@@ -243,8 +241,256 @@
 
       </ul>
     </section>
+
+    <section class="programs" data-test="programs">
+      <h2 class="programs__title">Программы</h2>
+      <a class="programs__button btn btn--icon" href="#">
+        все программы
+        <span class="btn__icon">
+          <svg width="8" height="8" aria-hidden="true" focusable="false">
+            <use href="/__spritemap#sprite-arrow"></use>
+          </svg>
+        </span>
+      </a>
+
+      <div class="programs__slider swiper" data-swiper="programs">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper programs__wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg" media="(max-width: 420px)" srcset="img/programs/programs-m-1.jpg" width="290"
+                  height="400">
+                <source type="image/jpg" media="(max-width: 768px)" srcset="img/programs/programs-t-1.jpg" width="324"
+                  height="420">
+                <img src="img/programs/programs-d-1.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Стажировки</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-2.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Волонтёрство</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-3.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Учёба</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Получите образование и измените своё будущее.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-1.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Стажировки</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Получите незаменимый опыт работы в крупнейших мировых компаниях.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg" media="(max-width: 768px)" srcset="img/programs/programs-t-2.jpg" width="324"
+                  height="420">
+                <img src="img/programs/programs-d-2.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Волонтёрство</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg" media="(max-width: 768px)" srcset="img/programs/programs-t-3.jpg" width="324"
+                  height="420">
+                <img src="img/programs/programs-d-3.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Учёба</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Получите образование и измените своё будущее.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-2.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Волонтёрство</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-3.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Учёба</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Получите образование и измените своё будущее.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide programs__slide">
+            <div class="programs__img-wrapper">
+              <picture>
+                <source type="image/jpg">
+                <img src="img/programs/programs-d-2.jpg" alt="" width="392" height="420">
+              </picture>
+            </div>
+            <div class="programs__container">
+              <div class="programs__overlay">
+                <h3 class="programs__caption">Волонтёрство</h3>
+                <div class="programs__content">
+                  <p class="programs__text">Помогайте другим и развивайте свои лидерские качества.</p>
+                  <a class="programs__icon btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="programs__footer">
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar programs__scroll-bar" data-swiper-scrollbar="programs"></div>
+        <div class="programs__buttons-wrapper">
+          <!-- If we need navigation buttons -->
+          <button class="swiper-button-prev btn-slider" data-swiper-button="programs-prev">
+            <svg width="11" height="12" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-slider-arrow"></use>
+            </svg>
+          </button>
+          <button class="swiper-button-next btn-slider btn-slider--next" data-swiper-button="programs-next">
+            <svg width="11" height="12" aria-hidden="true" focusable="false">
+              <use href="/__spritemap#sprite-slider-arrow"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
     <!--
-    <div data-test="programs">programs</div>
     <div data-test="grant">grant</div>
     <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
