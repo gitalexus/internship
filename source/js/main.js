@@ -20,7 +20,3 @@ window.addEventListener('DOMContentLoaded', () => {
 
   });
 });
-
-
-
-

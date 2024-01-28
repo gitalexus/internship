@@ -23,12 +23,10 @@
 }
 
 .control__check-mark {
-  display: inline-block;
   width: 20px;
   height: 21px;
   border-radius: 2px;
   border: 1px solid rgba($color-primary, 0.7);
-  background-color: $color-primary;
   color: transparent;
   background-color: transparent;
   display: flex;
@@ -37,14 +35,13 @@
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   cursor: pointer;
 
-  .control-field--chekbox:checked~label & {
+  .control-field--chekbox:checked ~ label & {
     background-color: #316dc2;
-    color: white;
+    color: $color-inverse;
   }
-
 }
 
 .control--checkbox.is-invalid .control__check-mark {
-  border-color: #FF5E66;
-  background: rgba(255, 94, 102, 0.20);
+  border-color: #ff5e66;
+  background: rgba(255, 94, 102, 0.2);
 }

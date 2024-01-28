@@ -75,11 +75,6 @@
   .btn:active & {
     color: $btn-icon-color-active;
   }
-
-  &--slider {
-    width: 30px;
-    height: 30px;
-  }
 }
 
 .btn-close {
@@ -141,18 +136,21 @@
     }
   }
 
-  &.swiper-button-disabled {
-    background-color: transparent;
-    color: #A9AFB7;
-    cursor: auto;
-  }
 
   &--next {
     transform: rotate(180deg);
   }
 }
 
+.btn-slider.swiper-button-disabled {
+  background-color: transparent;
+  color: #a9afb7;
+  cursor: auto;
+}
+
 .btn__icon--slider {
+  width: 30px;
+  height: 30px;
 
   &:hover,
   &:focus-visible {
