@@ -1,0 +1,151 @@
+.news {
+  padding-bottom: 120px;
+  margin-bottom: 120px;
+}
+
+.new__title {
+  color: $color-primary;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 50px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 47px;
+}
+
+.news__swiper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 39px;
+}
+
+.news__tabs-slide {
+  width: fit-content;
+}
+
+.news__tabs-list {
+  margin-left: 30px;
+  width: fit-content;
+  align-items: center;
+}
+
+.news__content-swiper {
+  margin-bottom: 40px;
+}
+
+.new__content-slide {
+  height: 400px;
+  width: 286px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+
+  &--big {
+    width: calc(100% - 2 * 286px - 2 * 32px);
+  }
+}
+
+.news__img-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+
+  img {
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.news__overlay {
+  position: relative;
+  z-index: 2;
+
+  h3 {
+    color: $color-primary;
+    background-color: $bg-base;
+    margin: 0;
+    border-radius: 0px 12px 0px 0px;
+    position: relative;
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+    max-width: 291px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      bottom: 0;
+      right: -16px;
+      background-image: url("../img/svg/angel-beige.svg");
+    }
+
+  }
+
+  p {
+    margin: 0;
+    color: var(--Text, #484848);
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.news__date {
+  background-color: $bg-base;
+  border-radius: 0px 12px 0px 0px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    right: -16px;
+    background-image: url("../img/svg/angel-beige.svg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -16px;
+    left: 0;
+    background-image: url("../img/svg/angel-beige.svg");
+  }
+}
+
+.news__footer {
+  position: relative;
+  background-color: $bg-base;
+  display: grid;
+  grid-template-columns: 1fr 30px;
+  max-width: 389px;
+  min-width: 240px;
+  padding: 9px 18px 12px 0;
+  align-items: center;
+  min-height: 57px;
+  border-radius: 0px 12px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    bottom: 0;
+    right: -16px;
+    background-image: url("../img/svg/angel-beige.svg");
+  }
+}
+
+.news__btn {}

@@ -3,6 +3,8 @@ import Swiper from 'swiper/bundle';
 
 const swiperHero = document.querySelector('[data-swiper="hero"]');
 const swiperPrograms = document.querySelector('[data-swiper="programs"]');
+const swiperNewsTabs = document.querySelector('[data-swiper="news-tabs"]');
+const swiperNewsContent = document.querySelector('[data-swiper="news-content"]');
 
 const swiperHeroOptions = {
   uniqueNavElements: false,
@@ -50,15 +52,43 @@ const swiperProgramsOptions = {
   },
 };
 
+const swiperNewsTabsOptions = {
+  slidesPerView: 'auto',
+  spaceBetween: 28,
+};
+
+const swiperNewsContentOptions = {
+  // slidesPerView: 3,
+  slidesPerView: 'auto',
+  spaceBetween: 32,
+};
+
 function initSlider(slierElement, sliderOptions) {
   return slierElement
     ? new Swiper(slierElement, sliderOptions)
     : undefined;
 }
 
+function initTabsButtons() {
+  const tabs = document.querySelectorAll('.btn--tab');
+  for (let tab of tabs) {
+    tab.addEventListener('click', (event) => {
+      event.preventDefault();
+      document.querySelector('.btn--tab:disabled').disabled = false;
+      event.target.disabled = true;
+    });
+    tab = null;
+  }
+}
+
 function initSliders() {
   initSlider(swiperHero, swiperHeroOptions);
   initSlider(swiperPrograms, swiperProgramsOptions);
+  initSlider(swiperNewsTabs, swiperNewsTabsOptions);
+  initSlider(swiperNewsContent, swiperNewsContentOptions);
+
+  initTabsButtons();
 }
+
 
 export {initSliders};

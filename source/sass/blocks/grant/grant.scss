@@ -3,6 +3,7 @@
   color: $color-beige;
   padding-top: 124px;
   padding-bottom: 120px;
+  margin-bottom: 124px;
 
   @include break($vp-desk-interim) {
     padding-top: 98px;

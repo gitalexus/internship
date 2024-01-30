@@ -25,7 +25,6 @@
     padding: 2px 20px;
   }
 
-
   &:focus-visible,
   &:hover {
     color: $btn-color-hover;
@@ -44,6 +43,25 @@
     @include break($vp-mobile-interim) {
       gap: 19px;
       padding-right: 3px;
+    }
+  }
+
+  &--tab {
+    padding: 11px 26px;
+    border: 1px solid transparent;
+    opacity: 0.6;
+
+    &:hover,
+    &:focus-visible {
+      opacity: 1;
+      background-color: transparent;
+      color: $color-primary
+    }
+
+    &:disabled {
+      border-color: $color-primary;
+      cursor: auto;
+      opacity: 1;
     }
   }
 }

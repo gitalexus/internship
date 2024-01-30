@@ -546,8 +546,73 @@
       </div>
       <div class="grant-left"></div>
     </section>
+    <section class="news container" data-test="news">
+      <h2 class="new__title">Новости и материалы</h2>
+      <div class="news__swiper swiper" data-swiper="news-tabs">
+        <div class="news__tabs-list swiper-wrapper">
+          <div class="news__tabs-slide swiper-slide">
+            <button class="btn btn--tab" type="button" disabled>Общее</button>
+          </div>
+          <div class="news__tabs-slide swiper-slide">
+            <button class="btn btn--tab" type="button">Волонтёрство</button>
+          </div>
+          <div class="news__tabs-slide swiper-slide">
+            <button class="btn btn--tab" type="button">Стажировки</button>
+          </div>
+          <div class="news__tabs-slide swiper-slide">
+            <button class="btn btn--tab" type="button">Карьера</button>
+          </div>
+          <div class="news__tabs-slide swiper-slide">
+            <button class="btn btn--tab" type="button">путешествия</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="news__content-swiper-wrapper">
+        <div class="news__content-swiper swiper" data-swiper="news-content">
+          <div class="new__content-wrapper swiper-wrapper">
+            <div class="new__content-slide new__content-slide--big swiper-slide">
+              <div class="news__img-wrapper">
+                <picture>
+                  <img src="img/news/news-d-1.jpg" alt="">
+                </picture>
+              </div>
+              <div class="news__overlay">
+                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                <h3>Интервью с участницей программы стажировки</h3>
+                <div class="news__footer">
+                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                  <!-- <button class="news__btn btn btn--icon"></button> -->
+                  <a class="news__button btn--icon" href="#">
+                    <span class="btn__icon btn__icon--slider">
+                      <svg width="8" height="8" aria-hidden="true" focusable="false">
+                        <use href="/__spritemap#sprite-arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="new__content-slide swiper-slide">slide-2</div>
+            <div class="new__content-slide swiper-slide">slide-3</div>
+            <div class="new__content-slide new__content-slide--big swiper-slide">slide-4</div>
+            <div class="new__content-slide swiper-slide">slide-5</div>
+            <div class="new__content-slide swiper-slide">slide-6</div>
+            <div class="new__content-slide new__content-slide--big swiper-slide">slide-7</div>
+            <div class="new__content-slide swiper-slide">slide-8</div>
+          </div>
+        </div>
+
+        <div class="news__pagination" data-pagination="news"></div>
+        <button class="" data-swiper-button="news-content-prev">prev</button>
+        <button class="" data-swiper-button="news-content-next">next</button>
+      </div>
+
+
+
+
+    </section>
     <!--
-    <div data-test="news">news</div>
     <div data-test="FAQ">FAQ</div>
     <div data-test="reviews">reviews</div>
     <div data-test="contacts">contacts</div>
