@@ -4,10 +4,22 @@
   padding-top: 124px;
   padding-bottom: 120px;
 
+  @include break($vp-desk-interim) {
+    padding-top: 98px;
+    padding-bottom: 100px;
+  }
+
   p {
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 33px;
+
+    @include break($vp-desk-interim) {
+      font-size: 16px;
+      line-height: 20px;
+      max-width: 498px;
+      margin-bottom: 36px;
+    }
   }
 }
 
@@ -19,6 +31,7 @@
   @include break($vp-1250) {
     display: flex;
     flex-direction: column;
+    gap: 41px;
   }
 }
 
@@ -29,6 +42,12 @@
   line-height: 50px;
   margin: 0;
   margin-bottom: 29px;
+
+  @include break($vp-desk-interim) {
+    font-size: 34px;
+    line-height: 50px;
+    margin-bottom: 28px;
+  }
 }
 
 .grant__right-sub-title {
@@ -40,14 +59,32 @@
   line-height: 36px;
   margin: 0;
   margin-bottom: 55px;
+
+  @include break($vp-1250) {
+    font-size: 28px;
+    line-height: 28px;
+    max-width: none;
+    margin-bottom: 42px;
+  }
 }
 
 .grand__img-wrapper {
   width: 498px;
   height: 363px;
 
+  @include break($vp-1250) {
+    width: auto;
+    height: 375px;
+    align-self: stretch;
+  }
+
   img {
     border-radius: 16px;
+
+    @include break($vp-1250) {
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 
@@ -59,6 +96,13 @@
   flex-direction: column;
   gap: 23px;
   counter-reset: grand-items;
+
+  @include break($vp-1250) {
+    gap: 27px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
 }
 
 .grant__item {
@@ -70,6 +114,12 @@
   max-width: 478px;
   padding: 22px 25px;
   position: relative;
+
+  @include break($vp-1250) {
+    width: calc(50% - 48px / 2 - 10px);
+    padding: 25px 24px;
+    line-height: 20px;
+  }
 
   &::before {
     counter-increment: grand-items;
@@ -93,5 +143,10 @@
 
   &--3 {
     padding-right: 100px;
+
+
+    @include break($vp-desk-interim) {
+      padding-right: 24px;
+    }
   }
 }
