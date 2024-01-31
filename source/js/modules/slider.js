@@ -1,5 +1,6 @@
 // https://swiperjs.com/get-started#installation
 import Swiper from 'swiper/bundle';
+import {Grid, Navigation, Pagination } from 'swiper/modules';
 
 const swiperHero = document.querySelector('[data-swiper="hero"]');
 const swiperPrograms = document.querySelector('[data-swiper="programs"]');
@@ -57,12 +58,22 @@ const swiperProgramsOptions = {
 
 const swiperNewsTabsOptions = {
   slidesPerView: 'auto',
-  spaceBetween: 28,
+  spaceBetween: 9,
+
+  breakpoints: {
+    720: {
+      spaceBetween: 8,
+    },
+    1020: {
+      spaceBetween: 28,
+    }
+  }
 };
 
 const swiperNewsContentOptions = {
-  slidesPerView: 'auto',
-  spaceBetween: 32,
+  modules: [Grid, Navigation, Pagination],
+  // slidesPerView: 'auto',
+  // spaceBetween: 32,
   navigation: {
     nextEl: '[data-swiper-button="news-content-next"]',
     prevEl: '[data-swiper-button="news-content-prev"]',
@@ -78,6 +89,34 @@ const swiperNewsContentOptions = {
     enabled: true,
   },
   slidesPerGroup: 3,
+  // autoHeight: true,
+
+  breakpoints: {
+    0: {
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
+      spaceBetween: 20,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+    },
+    721: {
+      grid: {
+        rows: 2,
+        fill: 'column',
+      },
+      spaceBetween: 30,
+      slidesPerGroup: 2,
+      slidesPerView: 2,
+    },
+    1121: {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      slidesPerGroup: 3,
+      grid: false,
+    }
+  }
 };
 
 function initSlider(slierElement, sliderOptions) {

@@ -11,4 +11,11 @@
   @include break($vp-mobile-interim) {
     padding: 0 15px;
   }
+
+  &--news-tabs {
+    @include break($vp-mobile-interim) {
+      padding: 0;
+      margin-left: 15px;
+    }
+  }
 }

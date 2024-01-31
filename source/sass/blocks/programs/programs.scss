@@ -184,6 +184,7 @@
 
   @include tablet {
     padding-right: 41px;
+    padding-bottom: 20px;
   }
 
   @include break($vp-420) {
@@ -258,8 +259,9 @@
   align-items: center;
 
   @include break($vp-desk-interim) {
-    padding-bottom: 12px;
+    padding-bottom: 8px;
     padding-top: 6px;
+    min-height: 77px;
   }
 
   @include break($vp-mobile-interim) {

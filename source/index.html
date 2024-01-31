@@ -546,9 +546,9 @@
       </div>
       <div class="grant-left"></div>
     </section>
-    <section class="news container" data-test="news">
-      <h2 class="new__title">Новости и материалы</h2>
-      <div class="news__swiper swiper" data-swiper="news-tabs">
+    <section class="news" data-test="news">
+      <h2 class="news__title">Новости и материалы</h2>
+      <div class="news__swiper swiper container container--news-tabs" data-swiper="news-tabs">
         <div class="news__tabs-list swiper-wrapper">
           <div class="news__tabs-slide swiper-slide">
             <button class="btn btn--tab" type="button" disabled>Общее</button>
@@ -568,299 +568,303 @@
         </div>
       </div>
 
-      <div class="news__content-swiper-wrapper">
-        <div class="news__content-swiper swiper" data-swiper="news-content">
-          <div class="new__content-wrapper swiper-wrapper">
+      <div class="container">
+        <div class="news__content-swiper-wrapper">
+          <div class="news__content-swiper swiper" data-swiper="news-content">
+            <div class="news__content-wrapper swiper-wrapper">
 
-            <!-- три слайда - 1 -->
-            <div class="new__content-slide new__content-slide--big swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-1.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-                <h3>Интервью с участницей программы стажировки</h3>
-                <div class="news__footer">
-                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <!-- четыре слайда - 1 -->
+              <div class="news__content-slider news__content-slider--big swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                  <h3>Интервью с участницей программы стажировки</h3>
+                  <div class="news__footer">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-2.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">20/03/2023</time>
-                <h3>Путешествуем по миру</h3>
-                <div class="news__footer">
-                  <p>Какие места посещают наши&nbsp;студенты весной</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">20/03/2023</time>
+                  <h3>Путешествуем по миру</h3>
+                  <div class="news__footer">
+                    <p>Какие места посещают наши студенты весной</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-3.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-                <h3>Новая&nbsp;программа волонтёрства</h3>
-                <div class="news__footer">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <h3>Новая&nbsp;программа волонтёрства</h3>
+                  <div class="news__footer">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- три слайда - 2 -->
-            <div class="new__content-slide new__content-slide--big swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-1.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-                <h3>Группа 2 - Интервью с участницей программы стажировки</h3>
-                <div class="news__footer">
-                  <p>Группа 2 - Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound
-                  </p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <source type="image/jpeg" media="(max-width: 1020px)" srcset="img/news/news-t-4.jpg">
+                    <img src="img/news/news-d-4.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-10">10/03/2023</time>
+                  <h3>Построй свою карьеру</h3>
+                  <div class="news__footer">
+                    <p>Ведущие компании готовы трудоустроить выпускников стажировки</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-2.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">20/03/2023</time>
-                <h3>Путешествуем по миру</h3>
-                <div class="news__footer">
-                  <p>Какие места посещают наши&nbsp;студенты весной</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <!-- три слайда - 2 -->
+              <div class="news__content-slider news__content-slider--big swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                  <h3>Группа 2 - Интервью с участницей программы стажировки</h3>
+                  <div class="news__footer">
+                    <p>Группа 2 - Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка
+                      в ISOFound
+                    </p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-3.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-                <h3>Группа 2 - Новая&nbsp;программа волонтёрства</h3>
-                <div class="news__footer">
-                  <p>Группа 2 - Программа помощи детям длительностью 4 месяца</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">20/03/2023</time>
+                  <h3>Путешествуем по миру</h3>
+                  <div class="news__footer">
+                    <p>Какие места посещают наши&nbsp;студенты весной</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- три слайда - 3 -->
-            <div class="new__content-slide new__content-slide--big swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-1.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-                <h3>ГРУППА 3 - Интервью с участницей программы стажировки</h3>
-                <div class="news__footer">
-                  <p>ГРУППА - 3 - Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка
-                    в ISOFound</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <h3>Группа 2 - Новая&nbsp;программа волонтёрства</h3>
+                  <div class="news__footer">
+                    <p>Группа 2 - Программа помощи детям длительностью 4 месяца</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-2.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">20/03/2023</time>
-                <h3>Путешествуем по миру</h3>
-                <div class="news__footer">
-                  <p>Какие места посещают наши&nbsp;студенты весной</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <!-- три слайда - 3 -->
+              <div class="news__content-slider news__content-slider--big swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                  <h3>ГРУППА 3 - Интервью с участницей программы стажировки</h3>
+                  <div class="news__footer">
+                    <p>ГРУППА - 3 - Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка
+                      в ISOFound</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-3.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-                <h3>Новая&nbsp;программа волонтёрства</h3>
-                <div class="news__footer">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-2.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">20/03/2023</time>
+                  <h3>Путешествуем по миру</h3>
+                  <div class="news__footer">
+                    <p>Какие места посещают наши&nbsp;студенты весной</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <!-- три слайда - 4 -->
-            <div class="new__content-slide new__content-slide--big swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-1.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">23/03/2023</time>
-                <h3>Интервью с участницей программы стажировки</h3>
-                <div class="news__footer">
-                  <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <h3>Новая&nbsp;программа волонтёрства</h3>
+                  <div class="news__footer">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-2.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-23">20/03/2023</time>
-                <h3>Путешествуем по миру</h3>
-                <div class="news__footer">
-                  <p>Какие места посещают наши&nbsp;студенты весной</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <!-- три слайда - 4 -->
+              <div class="news__content-slider news__content-slider--big swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-1.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-23">23/03/2023</time>
+                  <h3>Интервью с участницей программы стажировки</h3>
+                  <div class="news__footer">
+                    <p>Саша рассказывает, как попала в программу и как прошла 6-месячная стажировка в ISOFound</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div class="new__content-slide swiper-slide">
-              <div class="news__img-wrapper">
-                <picture>
-                  <img src="img/news/news-d-3.jpg" alt="">
-                </picture>
-              </div>
-              <div class="news__overlay">
-                <time class="news__date" datetime="2023-03-17">17/03/2023</time>
-                <h3>Новая&nbsp;программа волонтёрства</h3>
-                <div class="news__footer">
-                  <p>Программа помощи детям длительностью 4 месяца</p>
-                  <a class="news__button btn--icon" href="#">
-                    <span class="btn__icon btn__icon--slider">
-                      <svg width="8" height="8" aria-hidden="true" focusable="false">
-                        <use href="/__spritemap#sprite-arrow"></use>
-                      </svg>
-                    </span>
-                  </a>
+              <div class="news__content-slider swiper-slide">
+                <div class="news__img-wrapper">
+                  <picture>
+                    <img src="img/news/news-d-3.jpg" alt="">
+                  </picture>
+                </div>
+                <div class="news__overlay">
+                  <time class="news__date" datetime="2023-03-17">17/03/2023</time>
+                  <h3>Новая&nbsp;программа волонтёрства</h3>
+                  <div class="news__footer">
+                    <p>Программа помощи детям длительностью 4 месяца</p>
+                    <a class="news__button btn--icon" href="#">
+                      <span class="btn__icon btn__icon--slider">
+                        <svg width="8" height="8" aria-hidden="true" focusable="false">
+                          <use href="/__spritemap#sprite-arrow"></use>
+                        </svg>
+                      </span>
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
 
+            </div>
           </div>
-        </div>
-        <div class="news__bottom-wrapper">
-          <!-- <button class="" data-swiper-button="news-content-prev">prev</button>
-          <button class="" data-swiper-button="news-content-next">next</button> -->
+          <div class="news__bottom-wrapper">
+            <!-- <button class="" data-swiper-button="news-content-prev">prev</button>
+            <button class="" data-swiper-button="news-content-next">next</button> -->
 
-          <button class="swiper-button-prev btn-slider" data-swiper-button="news-content-prev" type="button"
-            aria-label="предыдущий слайд">
-            <svg width="11" height="12" aria-hidden="true" focusable="false">
-              <use href="/__spritemap#sprite-slider-arrow"></use>
-            </svg>
-          </button>
-          <div class="news__pagination" data-pagination="news"></div>
-          <button class="swiper-button-next btn-slider btn-slider--next" data-swiper-button="news-content-next"
-            aria-label="следующий слайд" type="button">
-            <svg width="11" height="12" aria-hidden="true" focusable="false">
-              <use href="/__spritemap#sprite-slider-arrow"></use>
-            </svg>
-          </button>
+            <button class="swiper-button-prev btn-slider" data-swiper-button="news-content-prev" type="button"
+              aria-label="предыдущий слайд">
+              <svg width="11" height="12" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-slider-arrow"></use>
+              </svg>
+            </button>
+            <div class="news__pagination" data-pagination="news"></div>
+            <button class="swiper-button-next btn-slider btn-slider--next" data-swiper-button="news-content-next"
+              aria-label="следующий слайд" type="button">
+              <svg width="11" height="12" aria-hidden="true" focusable="false">
+                <use href="/__spritemap#sprite-slider-arrow"></use>
+              </svg>
+            </button>
+          </div>
         </div>
       </div>
 

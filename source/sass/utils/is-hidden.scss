@@ -1,5 +1,8 @@
 .m-hide {
-  display: none;
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .m-show {
