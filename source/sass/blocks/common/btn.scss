@@ -25,8 +25,8 @@
     padding: 2px 20px;
   }
 
-  &:focus-visible,
-  &:hover {
+  &:hover,
+  &:focus-visible {
     color: $btn-color-hover;
     background-color: $color-primary;
     outline: none;
@@ -50,6 +50,7 @@
     padding: 11px 26px;
     border: 1px solid transparent;
     opacity: 0.6;
+    transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.25s ease-in-out;
 
     &:hover,
     &:focus-visible {
@@ -175,6 +176,7 @@
     transform: rotate(45deg);
     background-color: $color-inverse;
     color: $color-primary;
+    outline: none;
   }
 
   &:active {

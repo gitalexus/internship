@@ -28,6 +28,9 @@ const swiperProgramsOptions = {
     nextEl: '[data-swiper-button="programs-next"]',
     prevEl: '[data-swiper-button="programs-prev"]',
   },
+  pagination: {
+    el: '[data-pagination="news"]',
+  },
   scrollbar: {
     el: '[data-swiper-scrollbar="programs"]',
   },
@@ -58,9 +61,23 @@ const swiperNewsTabsOptions = {
 };
 
 const swiperNewsContentOptions = {
-  // slidesPerView: 3,
   slidesPerView: 'auto',
   spaceBetween: 32,
+  navigation: {
+    nextEl: '[data-swiper-button="news-content-next"]',
+    prevEl: '[data-swiper-button="news-content-prev"]',
+  },
+  pagination: {
+    el: '[data-pagination="news"]',
+    clickable: true,
+    renderBullet: function (index, className) {
+      return `<button class="${ className }" type="button">${ index + 1 }</button>`;
+    },
+  },
+  keyboard: {
+    enabled: true,
+  },
+  slidesPerGroup: 3,
 };
 
 function initSlider(slierElement, sliderOptions) {

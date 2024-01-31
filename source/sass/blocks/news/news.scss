@@ -73,11 +73,14 @@
     margin: 0;
     border-radius: 0px 12px 0px 0px;
     position: relative;
+    padding: 4px 12px 2px 0;
+    max-width: 291px;
+    margin-right: 72px;
+    padding-bottom: 0;
 
     font-size: 24px;
     font-weight: 400;
     line-height: 26px;
-    max-width: 291px;
 
     &::after {
       content: "";
@@ -103,13 +106,22 @@
   background-color: $bg-base;
   border-radius: 0px 12px 0px 0px;
   position: relative;
+  padding: 10px 12px 6px 0;
+
+  color: $color-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
 
   &::after {
     content: "";
     position: absolute;
     width: 16px;
     height: 16px;
-    bottom: 0;
+    bottom: 6px;
     right: -16px;
     background-image: url("../img/svg/angel-beige.svg");
   }
@@ -136,6 +148,8 @@
   align-items: center;
   min-height: 57px;
   border-radius: 0px 12px;
+  margin-right: 46px;
+  gap: 10px;
 
   &::after {
     content: "";
@@ -148,4 +162,59 @@
   }
 }
 
-.news__btn {}
+.new__content-slide--big {
+  h3 {
+    padding-top: 13px;
+    padding-bottom: 2px;
+    margin-right: 117px;
+  }
+
+  .news__footer {
+    margin-right: 84px;
+  }
+}
+
+.news__pagination {
+  display: flex;
+  gap: 20px;
+}
+
+.news__bottom-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.news .swiper-pagination-bullet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  opacity: 0.5;
+  color: $color-primary;
+  transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out, color 0.2s ease-in-out, border 0.25s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    border-color: $color-primary;
+    opacity: 1;
+    outline: none;
+  }
+
+  &:active {
+    background-color: #275699;
+    border: #275699;
+    color: $color-inverse;
+  }
+}
+
+.news .swiper-pagination-bullet-active {
+  color: $color-inverse;
+  background-color: $color-primary;
+  opacity: 1;
+  cursor: auto;
+}
