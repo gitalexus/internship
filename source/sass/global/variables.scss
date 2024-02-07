@@ -37,6 +37,8 @@ $font-size-base: 16px;
 // Colors
 // ---------------------------------
 $color-primary: #316dc2;
+$color-active: #275699;
+$color-disabled: #a9afb7;
 $color-inverse: #ffffff;
 $color-beige: #f0efe9;
 $text-color-base: #484848;
@@ -51,3 +53,6 @@ $btn-icon-bg-color: $color-primary;
 $btn-color-hover: $color-inverse;
 $btn-color-active: rgba(255, 255, 255, 0.7);
 $btn-icon-color-active: rgba(49, 110, 196, 0.7);
+
+// utils
+$tf-default: 0.25s ease;
